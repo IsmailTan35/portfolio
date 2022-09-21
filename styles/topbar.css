@@ -1,0 +1,46 @@
+.topbar-wrapper {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: rgb(85, 76, 76);
+
+  gap: 30px;
+  align-items: center;
+  padding: 0 300px;
+  color: wheat;
+}
+
+.topbar-user-wrapper {
+  display: flex;
+  flex: 1 1;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-user-icon {
+  height: 55px;
+  width: 55px;
+  background: wheat;
+  border-radius: 100%;
+  border: 2px solid rgb(190, 187, 26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(16, 10, 62);
+}
+
+.topbar-user-name {
+}
+
+.topbar-item-wrapper {
+  padding: 3px;
+  border-radius: 3px;
+}
+.topbar-item-wrapper:hover {
+  background: rgb(144, 127, 84);
+  cursor: pointer;
+  width: max-content;
+  margin-bottom: 3px;
+}
