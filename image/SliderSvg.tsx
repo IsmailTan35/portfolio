@@ -16,7 +16,7 @@ const Slider = (props: IProps) => {
         ></path>
         <path
           d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-          stroke="#ffc107"
+          stroke="#FFD700"
           stroke-width="7"
           fill-opacity="0"
           strokeDasharray="292.273, 292.273"

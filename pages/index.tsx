@@ -11,12 +11,12 @@ const Home: NextPage = () => {
     <>
       <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
         <Topbar />
-        <div style={{ flex: "1 1", overflowY: "scroll", padding: "0px 300px" }}>
+        <div
+          style={{ flex: "1 1", overflowY: "scroll", padding: "0px 300px" }}
+          className="wrapper"
+        >
           <HomeView />
-          <About />
           <Skills />
-          <Education />
-          <Contact />
         </div>
       </div>
     </>
