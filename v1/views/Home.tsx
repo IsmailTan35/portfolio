@@ -21,11 +21,11 @@ const Home = () => {
             </div>
           </div>
           <div className="home-content">
-            I'm {calculateDate()} years old. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Beatae consectetur quaerat saepe amet
-            exercitationem, nostrum necessitatibus commodi eum consequuntur
-            debitis modi, at praesentium aliquam quis aperiam? Amet est eveniet
-            ipsa!
+            I'm {calculateDate()} years old. I can clean code and pixel perfect
+            design. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Blanditiis quia odio quam, modi, placeat aut eos, tempore natus sed
+            debitis optio excepturi nostrum minima? A expedita dicta
+            voluptatibus odio nobis.
           </div>
         </div>
         <div className="home-picture-wrapper">

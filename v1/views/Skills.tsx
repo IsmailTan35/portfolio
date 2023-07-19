@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../image/SliderSvg";
+import Slider from "../../image/SliderSvg";
 
 const skills = [
   { skillName: "html", value: 75 },
