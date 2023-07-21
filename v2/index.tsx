@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const links = [
   {
@@ -33,6 +34,7 @@ const links = [
     bgColor: "#F44D4D",
   },
 ];
+// eslint-disable-next-line @next/next/no-img-element
 
 const V2 = () => {
   return (
@@ -92,8 +94,16 @@ const V2 = () => {
                   width: 100,
                   borderRadius: 50,
                   boxShadow: "0px 4px 0px 4px rgba(255,255,255,0.25)",
+                  overflow: "hidden",
                 }}
-              ></div>
+              >
+                <Image
+                  src="/image/myPicture.jpg"
+                  alt="İsmail Tan"
+                  width={100}
+                  height={100}
+                />
+              </div>
             </div>
             <div
               style={{
