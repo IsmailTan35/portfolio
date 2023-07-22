@@ -2,6 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  async rewrites() {
+    return [
+      {
+        source: "/.well-known/:path*",
+        destination: "/public/.well-known/:path*",
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
