@@ -4,18 +4,18 @@ import Image from "next/image";
 const links = [
   {
     text: "Discord Klon",
-    link: "https://notoriginaldiscord.vercel.app/",
+    link: "https://discordclone.ismailtan.dev/",
     bgColor: "#404EED",
   },
   {
     text: "Three.js Satranç Oyunu",
-    link: "https://chess3d.vercel.app/",
+    link: "https://chess3d.ismailtan.dev/",
     bgColor:
       "linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%)",
   },
   {
     text: "Three.js Online Tank Oyunu",
-    link: "https://waroftanks.vercel.app/",
+    link: "https://waroftanks.ismailtan.dev/",
     bgColor: "rgba(0, 255, 0, 0.5)",
   },
   {
