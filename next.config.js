@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/.well-known/:path*",
-        destination: "/.well-known/:path*",
+        destination: "/public/.well-known/:path*",
       },
     ];
   },
