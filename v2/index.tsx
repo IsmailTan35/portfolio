@@ -29,7 +29,7 @@ const links = [
     bgColor: "#0A66C2",
   },
   {
-    text: "Blog",
+    text: "Portfolyo",
     link: "https://blog.ismailtan.dev",
     bgColor: "#F44D4D",
   },
