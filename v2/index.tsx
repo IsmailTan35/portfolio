@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+const window = globalThis as any;
+
 const links = [
   {
     text: "Discord Klon",
