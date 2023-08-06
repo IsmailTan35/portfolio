@@ -4,39 +4,55 @@ import Image from "next/image";
 const links = [
   {
     text: "Discord Klon",
-    link: "https://discordclone.ismailtan.dev/",
+    webLink: "https://discordclone.ismailtan.dev/",
+    appLink: null,
     bgColor: "#404EED",
   },
   {
     text: "Three.js Satranç Oyunu",
-    link: "https://chess3d.ismailtan.dev/",
+    webLink: "https://chess3d.ismailtan.dev/",
+    appLink: null,
     bgColor:
       "linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%)",
   },
   {
     text: "Three.js Online Tank Oyunu",
-    link: "https://waroftanks.ismailtan.dev/",
+    webLink: "https://waroftanks.ismailtan.dev/",
+    appLink: null,
     bgColor: "rgba(0, 255, 0, 0.5)",
   },
   {
     text: "Github",
-    link: "https://github.com/IsmailTan35",
+    webLink: "https://github.com/IsmailTan35",
+    appLink: "github://user?username=IsmailTan35",
     bgColor: "#000",
   },
   {
     text: "Linkedin",
-    link: "https://www.linkedin.com/in/ismailtan35/",
+    webLink: "https://www.linkedin.com/in/ismailtan35/",
+    appLink: "linkedin://profile?id=ismailtan35",
     bgColor: "#0A66C2",
   },
   {
     text: "Portfolyo",
-    link: "https://blog.ismailtan.dev",
+    webLink: "https://blog.ismailtan.dev",
+    appLink: null,
     bgColor: "#F44D4D",
   },
 ];
 // eslint-disable-next-line @next/next/no-img-element
 
 const V2 = () => {
+  function openAppOrWeb(link: any) {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var isLinkedInApp = /linkedin/.test(userAgent.toLowerCase());
+
+    if (isLinkedInApp) {
+      window.location.href = link.appLink;
+    } else {
+      window.open(link.webLink, "_blank");
+    }
+  }
   return (
     <div
       style={{
@@ -145,9 +161,7 @@ const V2 = () => {
             >
               {links.map((link, idx) => {
                 return (
-                  <a
-                    target={"blank"}
-                    href={link.link}
+                  <div
                     key={idx}
                     style={{
                       width: "100%",
@@ -161,6 +175,10 @@ const V2 = () => {
                       alignItems: "center",
                       gap: 22,
                       padding: "7px 10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      openAppOrWeb(link);
                     }}
                   >
                     <div
@@ -200,7 +218,7 @@ const V2 = () => {
                     >
                       {link.text}
                     </div>
-                  </a>
+                  </div>
                 );
               })}
             </div>
