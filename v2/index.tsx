@@ -6,40 +6,46 @@ const window = globalThis as any;
 const links = [
   {
     text: "Discord Klon",
+    bgColor: "#404EED",
     webLink: "https://discordclone.ismailtan.dev/",
     appLink: null,
-    bgColor: "#404EED",
+    app: null,
   },
   {
     text: "Three.js Satranç Oyunu",
-    webLink: "https://chess3d.ismailtan.dev/",
-    appLink: null,
     bgColor:
       "linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%)",
+    webLink: "https://chess3d.ismailtan.dev/",
+    appLink: null,
+    app: null,
   },
   {
     text: "Three.js Online Tank Oyunu",
+    bgColor: "rgba(0, 255, 0, 0.5)",
     webLink: "https://waroftanks.ismailtan.dev/",
     appLink: null,
-    bgColor: "rgba(0, 255, 0, 0.5)",
+    app: null,
   },
   {
     text: "Github",
+    bgColor: "#000",
     webLink: "https://github.com/IsmailTan35",
     appLink: "github://user?username=IsmailTan35",
-    bgColor: "#000",
+    app: /github/,
   },
   {
     text: "Linkedin",
+    bgColor: "#0A66C2",
     webLink: "https://www.linkedin.com/in/ismailtan35/",
     appLink: "linkedin://profile?id=ismailtan35",
-    bgColor: "#0A66C2",
+    app: /linkedin/,
   },
   {
     text: "Portfolyo",
+    bgColor: "#F44D4D",
     webLink: "https://blog.ismailtan.dev",
     appLink: null,
-    bgColor: "#F44D4D",
+    app: null,
   },
 ];
 // eslint-disable-next-line @next/next/no-img-element
@@ -47,7 +53,7 @@ const links = [
 const V2 = () => {
   function openAppOrWeb(link: any) {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    var isLinkedInApp = /linkedin/.test(userAgent.toLowerCase());
+    var isLinkedInApp = link.app?.test(userAgent.toLowerCase());
 
     if (isLinkedInApp) {
       window.location.href = link.appLink;
@@ -55,6 +61,7 @@ const V2 = () => {
       window.open(link.webLink, "_blank");
     }
   }
+
   return (
     <div
       style={{
